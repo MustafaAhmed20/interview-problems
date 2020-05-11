@@ -17,8 +17,8 @@ Include unit tests with your solution
 
 ### Examples
 > - persistence(39) == 3 # because 3*9 = 27, 2*7 = 14, 1*4=4  and 4 has only one digit
-- persistence(999) == 4 # because 9*9*9 = 729, 7*2*9 = 126,   1*2*6 = 12, and finally 1*2 = 2
-- persistence(4) == 0 # because 4 is already a one-digit number
+>- persistence(999) == 4 # because 9*9*9 = 729, 7*2*9 = 126,   1*2*6 = 12, and finally 1*2 = 2
+> - persistence(4) == 0 # because 4 is already a one-digit number
 
 ## Problem two
 >Instructions
@@ -27,8 +27,8 @@ Include unit tests with your solution
 
 ### Examples
 > - "man i need a taxi up to ubud" -> "taxi" 
-- "what time are we climbing up to the volcano" -> "volcano"
-- "take me to semynak" -> "semynak
+> - "what time are we climbing up to the volcano" -> "volcano"
+> - "take me to semynak" -> "semynak
 
 ## Problem three
 >Instructions
@@ -47,6 +47,6 @@ Include unit tests with your solution
 
 ### Examples
 > - 0 -> “now”
-- 62 -> “1 minute and 2 seconds”
-- 3662 -> “1 hour, 1 minute and 2 seconds”
+> - 62 -> “1 minute and 2 seconds”
+> - 3662 -> “1 hour, 1 minute and 2 seconds”
 
