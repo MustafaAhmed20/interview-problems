@@ -41,11 +41,12 @@ def formatTime(seconds):
 	hour %= 24
 	days %= 365
 
-	availableFormats = [f'{years} year' if years else None,\
-						f'{days} day' if days else None,\
-						f'{hour} hour' if hour else None,\
-						f'{minutes} minute' if minutes else None,\
-						f'{seconds} seconds' if seconds else None]
+	# format the time and add the 's' if the value > 1
+	availableFormats = [f'{years} year' + ('s' if years > 1 else '') if years else None,\
+			f'{days} day' + ('s' if days > 1 else '') if days else None,\
+			f'{hour} hour' + ('s' if hour > 1 else '') if hour else None,\
+			f'{minutes} minute' + ('s' if minutes > 1 else '')  if minutes else None,\
+			f'{seconds} second' + ('s' if seconds > 1 else '')  if seconds else None]
 
 	# remove None values
 	for _ in range(availableFormats.count(None)):
@@ -62,6 +63,12 @@ class testFormatTime(unittest.TestCase):
 		self.assertEqual(formatTime(62), '1 minute and 2 seconds')
 
 		self.assertEqual(formatTime(3662), '1 hour, 1 minute and 2 seconds')
+		
+
+	def test2(self):
+		self.assertEqual(formatTime(122), '2 minutes and 2 seconds')
+		
+		self.assertEqual(formatTime(121), '2 minutes and 1 second')
 
 
 if __name__ == "__main__":
